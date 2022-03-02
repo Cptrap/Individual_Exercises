@@ -42,24 +42,30 @@ NewLine();
 
 //5
 int seconds = 46857100;
-float hours = seconds / (float)3600;
-float mins = seconds / (float)60;
-float days = seconds / (float)86400;
-float years = seconds / (float)31536000;
-Console.WriteLine("Total number of minutes: " + mins);
-Console.WriteLine("Total number of hours: " + hours);
-Console.WriteLine("Total number of days: " + days);
-Console.WriteLine("Total number of years: " + years);
+int secs = seconds % 60;
+int mins = (seconds / 60) % 60;
+int hours = (seconds / 3600) % 24;
+int days = ((seconds / 3600) / 24) - (((seconds / 3600) / 24) / 365) * 365;
+int years = ((seconds / 3600) / 24) / 365;
+string format = string.Format(
+      "{0} years, {1} days, {2} hours, {3} minutes, {4} seconds",
+       years, days, hours, mins, secs);
+Console.WriteLine(format);
 NewLine();
 
 
 
 //6
-TimeSpan interval = TimeSpan.FromSeconds(seconds);
-Console.WriteLine("Total number of minutes: " + interval.TotalMinutes);
-Console.WriteLine("Total number of hours: " + interval.TotalHours);
-Console.WriteLine("Total number of days: " + interval.TotalDays);
-Console.WriteLine("Total number of years: " + interval.TotalDays / 365);
+TimeSpan time = TimeSpan.FromSeconds(seconds);
+string formatted = string.Format(
+      "{0} years, {1} days, {2} hours, {3} minutes, {4} seconds",
+      time.Days / 365,
+      (time.Days - (time.Days / 365) * 365) ,
+      time.Hours,
+      time.Minutes,
+      time.Seconds);
+
+Console.WriteLine(formatted);
 NewLine();
 
 
