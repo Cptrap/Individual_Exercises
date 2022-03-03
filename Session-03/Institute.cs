@@ -9,16 +9,16 @@ namespace Session_03
     internal class Institute
     {
         public Guid ID { get; }
-        public string instituteName;
+        public string _name;
 
         private int YearsInService { get; set; }
         public string GetName()
         {
-            return instituteName;
+            return _name;
         }
         public void SetName(string name)
         {
-            instituteName = name;
+            _name = name;
         }
         public Institute() 
         { 
