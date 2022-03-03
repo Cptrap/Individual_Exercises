@@ -8,19 +8,19 @@ namespace Session_03
 {
     internal class University : Institute
     {
-        Array[] students = new Array[30];
+        public Student[] students;
 
-        Array[] courses = new Array[50];
+        public Course[] courses;
 
-        Array[] grades = new Array[30];
+        public Grade[] grades;
 
-        Array[] scheduledCourses = new Array[60];
+        public Schedule[] scheduledCourses;
 
 
-        public Array GetStudents() { return students; }
-        public Array GetCourses() { return courses; }
-        public Array GetGrades() { return grades; }
-        public Array GetScheduledCourses() { return scheduledCourses; }
+        public Student GetStudents() { return students[30]; }
+        public Course GetCourses() { return courses[50]; }
+        public Grade GetGrades() { return grades[30]; }
+        public Schedule GetScheduledCourses() { return scheduledCourses[30]; }
 
 
         public University()
