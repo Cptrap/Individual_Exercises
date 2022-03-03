@@ -1,4 +1,3 @@
-C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.csproj.AssemblyReference.cache
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.AssemblyInfoInputs.cache
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.AssemblyInfo.cs
@@ -13,3 +12,4 @@ C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\ref\Session-02b.dll
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.pdb
 C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.genruntimeconfig.cache
+C:\Users\user\source\Coding-School-2022\Session-02b\obj\Debug\net6.0\Session-02b.csproj.AssemblyReference.cache
