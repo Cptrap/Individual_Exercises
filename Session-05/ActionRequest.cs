@@ -16,8 +16,8 @@ namespace Session_05
         public Guid RequestId { get; set; }  
         public string Input { get; set; }
         public ActionEnum Action { get; set; }
-        public ActionRequest(Guid requestId, string input, ActionEnum action){
-            RequestId = requestId;
+        public ActionRequest(string input, ActionEnum action){
+            RequestId = Guid.NewGuid();
             Input = Input;
             Action = action;
         }

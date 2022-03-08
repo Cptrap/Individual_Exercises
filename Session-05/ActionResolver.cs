@@ -12,25 +12,25 @@ namespace Session_05
         public ActionResolver(){
             MessageLogger = new MessageLogger();
         }
-        //public static ActionResponse Execute()
-        //{
+        public ActionResponse Execute(ActionRequest request)
+        {
+            var response = new ActionResponse();
+            var action = new ActionEnum();
+            switch (action)
+            {
+                case ActionEnum.Convert:
+                    return new ConvertResolver();
+                case ActionEnum.Uppercase:
+                    return new UppercaseResolver();
+                case ActionEnum.Reverse:
+                    return new ReverseResolver();
+                default:
+                    return null;
 
-        //    var action = new ActionEnum();
-        //    switch (action)
-        //    {
-        //        case ActionEnum.Convert:
-        //            return new ConvertResolver();
-        //        case ActionEnum.Uppercase:
-        //            return new UppercaseResolver();
-        //        case ActionEnum.Reverse:
-        //            return new ReverseResolver();
-        //        default:
-        //           return ;
-                    
-        //    }
+            }
                  
             
-        //}
+        }
 
     }
 }

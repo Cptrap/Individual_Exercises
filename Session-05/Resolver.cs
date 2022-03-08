@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Session_05
 {
-    public abstract class Resolver
+    public abstract class Resolver:ActionResponse
     {
         public Resolver()
         {
