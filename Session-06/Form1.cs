@@ -26,7 +26,7 @@ namespace Session_06
 
         public void button1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = Reader.ButtonReader(buttonNumber1.Text, textBox1.Text);
+            Handler(sender);
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -116,6 +116,10 @@ namespace Session_06
         {
             textBox1.Text = Result.ValueAndOperator((int)Calculator.MathOperations.SquareRoot, textBox1.Text);
             textBox1.Text = Result.Equals(textBox1.Text);
+        }
+        private void Handler(object sender)
+        {
+            textBox1.Text = Reader.ButtonReader(sender, textBox1.Text);
         }
     }
 }
