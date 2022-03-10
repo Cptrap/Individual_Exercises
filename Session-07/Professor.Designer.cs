@@ -35,7 +35,7 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -66,7 +66,7 @@
             // layoutControl1
             // 
             this.layoutControl1.Controls.Add(this.simpleButton1);
-            this.layoutControl1.Controls.Add(this.simpleButton3);
+            this.layoutControl1.Controls.Add(this.btnCancel);
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Controls.Add(this.textEdit2);
             this.layoutControl1.Controls.Add(this.textEdit3);
@@ -145,18 +145,19 @@
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // simpleButton3
+            // btnCancel
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(595, 317);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(74, 22);
-            this.simpleButton3.StyleController = this.layoutControl1;
-            this.simpleButton3.TabIndex = 8;
-            this.simpleButton3.Text = "Cancel";
+            this.btnCancel.Location = new System.Drawing.Point(595, 317);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 22);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 8;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem1
             // 
-            this.layoutControlItem1.Control = this.simpleButton3;
+            this.layoutControlItem1.Control = this.btnCancel;
             this.layoutControlItem1.Location = new System.Drawing.Point(583, 305);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(78, 26);
@@ -267,7 +268,7 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraEditors.TextEdit textEdit1;

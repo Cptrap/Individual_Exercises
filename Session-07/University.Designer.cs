@@ -37,7 +37,7 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -88,7 +88,7 @@
             // 
             this.layoutControl1.Controls.Add(this.textEdit1);
             this.layoutControl1.Controls.Add(this.simpleButton11);
-            this.layoutControl1.Controls.Add(this.simpleButton2);
+            this.layoutControl1.Controls.Add(this.btnCancel);
             this.layoutControl1.Controls.Add(this.textEdit3);
             this.layoutControl1.Controls.Add(this.textEdit4);
             this.layoutControl1.Controls.Add(this.textEdit2);
@@ -162,15 +162,16 @@
             this.simpleButton11.TabIndex = 5;
             this.simpleButton11.Text = "Save";
             // 
-            // simpleButton2
+            // btnCancel
             // 
-            this.simpleButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.simpleButton2.Location = new System.Drawing.Point(520, 299);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(66, 23);
-            this.simpleButton2.StyleController = this.layoutControl1;
-            this.simpleButton2.TabIndex = 6;
-            this.simpleButton2.Text = "Cancel";
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(520, 299);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(66, 23);
+            this.btnCancel.StyleController = this.layoutControl1;
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // layoutControlItem2
             // 
@@ -190,7 +191,7 @@
             // 
             // layoutControlItem3
             // 
-            this.layoutControlItem3.Control = this.simpleButton2;
+            this.layoutControlItem3.Control = this.btnCancel;
             this.layoutControlItem3.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.layoutControlItem3.CustomizationFormText = "layoutControlItem2";
             this.layoutControlItem3.Location = new System.Drawing.Point(508, 287);
@@ -307,7 +308,7 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SimpleButton simpleButton11;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.TextEdit textEdit3;
         private DevExpress.XtraEditors.TextEdit textEdit4;
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;

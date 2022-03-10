@@ -21,5 +21,10 @@ namespace Session_07
         {
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

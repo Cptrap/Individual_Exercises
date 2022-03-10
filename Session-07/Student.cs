@@ -16,5 +16,10 @@ namespace Session_07
         {
             InitializeComponent();
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
