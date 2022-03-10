@@ -47,7 +47,5 @@ namespace Calculator
             text = result.ToString();
             return text;
         }
-
-
-    }
+    }  
 }
