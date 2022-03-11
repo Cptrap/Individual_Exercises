@@ -50,6 +50,7 @@
             this.courseSave = new DevExpress.XtraBars.BarButtonItem();
             this.courseLoad = new DevExpress.XtraBars.BarButtonItem();
             this.Save = new DevExpress.XtraBars.BarSubItem();
+            this.scheduleEdit = new DevExpress.XtraBars.BarButtonItem();
             this.scheduleSave = new DevExpress.XtraBars.BarButtonItem();
             this.scheduleLoad = new DevExpress.XtraBars.BarButtonItem();
             this.gradeItem = new DevExpress.XtraBars.BarSubItem();
@@ -68,7 +69,6 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-            this.scheduleEdit = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -178,12 +178,14 @@
             this.universitySave.Caption = "Save";
             this.universitySave.Id = 8;
             this.universitySave.Name = "universitySave";
+            this.universitySave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.universitySave_ItemClick);
             // 
             // universityLoad
             // 
             this.universityLoad.Caption = "Load";
             this.universityLoad.Id = 9;
             this.universityLoad.Name = "universityLoad";
+            this.universityLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.universityLoad_ItemClick);
             // 
             // barSubItem2
             // 
@@ -207,12 +209,14 @@
             this.professorSave.Caption = "Save";
             this.professorSave.Id = 10;
             this.professorSave.Name = "professorSave";
+            this.professorSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.professorSave_ItemClick);
             // 
             // professorLoad
             // 
             this.professorLoad.Caption = "Load";
             this.professorLoad.Id = 11;
             this.professorLoad.Name = "professorLoad";
+            this.professorLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.professorLoad_ItemClick);
             // 
             // studentItem
             // 
@@ -236,12 +240,14 @@
             this.studentSave.Caption = "Save";
             this.studentSave.Id = 16;
             this.studentSave.Name = "studentSave";
+            this.studentSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.studentSave_ItemClick);
             // 
             // studentLoad
             // 
             this.studentLoad.Caption = "Load";
             this.studentLoad.Id = 17;
             this.studentLoad.Name = "studentLoad";
+            this.studentLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.studentLoad_ItemClick);
             // 
             // courseItem
             // 
@@ -265,12 +271,14 @@
             this.courseSave.Caption = "Save";
             this.courseSave.Id = 18;
             this.courseSave.Name = "courseSave";
+            this.courseSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.courseSave_ItemClick);
             // 
             // courseLoad
             // 
             this.courseLoad.Caption = "Load";
             this.courseLoad.Id = 19;
             this.courseLoad.Name = "courseLoad";
+            this.courseLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.courseLoad_ItemClick);
             // 
             // Save
             // 
@@ -282,17 +290,26 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.scheduleLoad)});
             this.Save.Name = "Save";
             // 
+            // scheduleEdit
+            // 
+            this.scheduleEdit.Caption = "Edit";
+            this.scheduleEdit.Id = 35;
+            this.scheduleEdit.Name = "scheduleEdit";
+            this.scheduleEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.scheduleEdit_ItemClick);
+            // 
             // scheduleSave
             // 
             this.scheduleSave.Caption = "Save";
             this.scheduleSave.Id = 20;
             this.scheduleSave.Name = "scheduleSave";
+            this.scheduleSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.scheduleSave_ItemClick);
             // 
             // scheduleLoad
             // 
             this.scheduleLoad.Caption = "Load";
             this.scheduleLoad.Id = 21;
             this.scheduleLoad.Name = "scheduleLoad";
+            this.scheduleLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.scheduleLoad_ItemClick);
             // 
             // gradeItem
             // 
@@ -316,12 +333,14 @@
             this.gradeSave.Caption = "Save";
             this.gradeSave.Id = 33;
             this.gradeSave.Name = "gradeSave";
+            this.gradeSave.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.gradeSave_ItemClick);
             // 
             // gradeLoad
             // 
             this.gradeLoad.Caption = "Load";
             this.gradeLoad.Id = 34;
             this.gradeLoad.Name = "gradeLoad";
+            this.gradeLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.gradeLoad_ItemClick);
             // 
             // bar3
             // 
@@ -409,13 +428,6 @@
             this.barSubItem3.Caption = "Grade";
             this.barSubItem3.Id = 30;
             this.barSubItem3.Name = "barSubItem3";
-            // 
-            // scheduleEdit
-            // 
-            this.scheduleEdit.Caption = "Edit";
-            this.scheduleEdit.Id = 35;
-            this.scheduleEdit.Name = "scheduleEdit";
-            this.scheduleEdit.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.scheduleEdit_ItemClick);
             // 
             // Institute
             // 
