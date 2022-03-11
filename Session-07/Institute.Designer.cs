@@ -441,6 +441,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Institute";
             this.Text = "Institute";
+            this.Load += new System.EventHandler(this.Institute_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
