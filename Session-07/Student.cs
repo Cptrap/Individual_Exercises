@@ -7,19 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
-namespace Session_07
+namespace Session_08
 {
-    public partial class Student : Form
+    public partial class Student : DevExpress.XtraEditors.XtraForm
     {
         public Student()
         {
             InitializeComponent();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }
