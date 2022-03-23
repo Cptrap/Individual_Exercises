@@ -121,6 +121,7 @@
             this.grdCars.TabIndex = 4;
             this.grdCars.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grvCars});
+            this.grdCars.Click += new System.EventHandler(this.grdCars_Click);
             // 
             // grvCars
             // 

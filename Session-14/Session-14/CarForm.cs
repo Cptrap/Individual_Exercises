@@ -61,11 +61,23 @@ namespace Session_14
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+            if (grvCars.RowCount > 0)
+            {
+                var selectedCar = TakeCar();
+                if (selectedCar is not null)
+                {
+                    _carRepo.Update(selectedCar.ID, selectedCar);
+                    RefreshCars();
+                }
+            }
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void grdCars_Click(object sender, EventArgs e)
+        {
+            LoadCar();
         }
         private void RefreshCars()
         {
@@ -75,5 +87,27 @@ namespace Session_14
             grdCars.Refresh();
             grdCars.Update();
         }
+        private Car? LoadCar()
+        {
+            var selectedIndexes = grvCars.GetSelectedRows();
+            var selectedCar = grvCars.GetRow(selectedIndexes[0]) as Car;
+            cmbBrands.Text = selectedCar.Brand.ToString();
+            txtModel.Text = selectedCar.Model;
+            txtRegNumber.Text = selectedCar.RegistrationNumber;
+            
+            return selectedCar;
+
+        }
+        private Car? TakeCar()
+        {
+            var selectedIndexes = grvCars.GetSelectedRows();
+            var upadateCar = grvCars.GetRow(selectedIndexes[0]) as Car;
+            upadateCar.Brand = (Brands)Enum.Parse(typeof(Brands), cmbBrands.SelectedItem.ToString());
+            upadateCar.Model = txtModel.Text;
+            upadateCar.RegistrationNumber = txtRegNumber.Text;
+            return upadateCar;
+        }
+
+        
     }
 }

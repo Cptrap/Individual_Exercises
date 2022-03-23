@@ -42,7 +42,6 @@
             this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newTrasaction = new System.Windows.Forms.ToolStripMenuItem();
             this.monthlyLedgerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
@@ -61,8 +60,7 @@
             this.engineerToolStripMenuItem,
             this.serviceTaskToolStripMenuItem,
             this.transactionToolStripMenuItem,
-            this.monthlyLedgerToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.monthlyLedgerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(765, 24);
@@ -166,13 +164,6 @@
             this.monthlyLedgerToolStripMenuItem.Text = "Monthly Ledger";
             this.monthlyLedgerToolStripMenuItem.Click += new System.EventHandler(this.monthlyLedgerToolStripMenuItem_Click);
             // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
             // layoutControl1
             // 
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -241,7 +232,6 @@
         private ToolStripMenuItem editEngineer;
         private ToolStripMenuItem serviceTaskToolStripMenuItem;
         private ToolStripMenuItem editServiceTask;
-        private ToolStripMenuItem logoutToolStripMenuItem;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
