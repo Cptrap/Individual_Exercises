@@ -11,7 +11,7 @@ namespace Session_14.Model
     public class Transaction : BaseEntity
     {
         [Column(TypeName = "Date")]
-        public DateTime Date { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
         public Guid CustomerID { get; set; }
         public Customer Customer { get; set; }
         public Guid CarID { get; set; }
