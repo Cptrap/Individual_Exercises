@@ -17,7 +17,7 @@ namespace Session_14
 
     public partial class CarServiceCenterForm : DevExpress.XtraEditors.XtraForm 
     {
-        OpenForm openF = new OpenForm();
+        
         public static IServiceProvider ServiceProvider { get; private set; }
 
         public CarServiceCenterForm()
@@ -52,7 +52,12 @@ namespace Session_14
 
         private void editToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            //openF.Open<ManagersForm>();
+            var services = new ServiceCollection();
+            services.AddSingleton<IEntityRepo<Manager>, ManagerRepo>();
+            services.AddSingleton<ManagersForm>();
+            ServiceProvider = services.BuildServiceProvider();
+            var managerForm = ServiceProvider.GetRequiredService<ManagersForm>();
+            managerForm.ShowDialog();
         }
 
         private void editServiceTask_Click(object sender, EventArgs e)
