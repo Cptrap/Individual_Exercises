@@ -148,12 +148,6 @@ namespace Session_014.EF.Migrations
                         principalTable: "ServiceTask",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TransactionLine_Transaction_TransactionID",
-                        column: x => x.TransactionID,
-                        principalTable: "Transaction",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -185,32 +179,27 @@ namespace Session_014.EF.Migrations
                 name: "IX_TransactionLine_ServiceTaskID",
                 table: "TransactionLine",
                 column: "ServiceTaskID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_TransactionLine_TransactionID",
-                table: "TransactionLine",
-                column: "TransactionID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "TransactionLine");
-
-            migrationBuilder.DropTable(
-                name: "Engineer");
-
-            migrationBuilder.DropTable(
-                name: "ServiceTask");
-
-            migrationBuilder.DropTable(
                 name: "Transaction");
+
+            migrationBuilder.DropTable(
+                name: "TransactionLine");
 
             migrationBuilder.DropTable(
                 name: "Car");
 
             migrationBuilder.DropTable(
                 name: "Customer");
+
+            migrationBuilder.DropTable(
+                name: "Engineer");
+
+            migrationBuilder.DropTable(
+                name: "ServiceTask");
 
             migrationBuilder.DropTable(
                 name: "Manager");

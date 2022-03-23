@@ -37,7 +37,7 @@ namespace Session_014.EF.Context
             modelBuilder.Entity<Transaction>().HasOne(transaction => transaction.Manager).WithMany(manager => manager.Transactions).HasForeignKey(transaction => transaction.ManagerID);
 
             modelBuilder.Entity<TransactionLine>().HasOne(transactionLine => transactionLine.ServiceTask).WithMany(serviceTask => serviceTask.TransactionLines).HasForeignKey(transactionLine => transactionLine.ServiceTaskID);
-            modelBuilder.Entity<TransactionLine>().HasOne(transactionLine => transactionLine.Transaction).WithMany(transaction => transaction.TransactionLines).HasForeignKey(transactionLine => transactionLine.TransactionID);
+            //modelBuilder.Entity<TransactionLine>().HasOne(transactionLine => transactionLine.Transaction).WithMany(transaction => transaction.TransactionLines).HasForeignKey(transactionLine => transactionLine.TransactionID);
             modelBuilder.Entity<TransactionLine>().HasOne(transactionLine => transactionLine.Engineer).WithMany(engineer => engineer.TransactionLines).HasForeignKey(transactionLine => transactionLine.EngineerID);
             modelBuilder.Entity<TransactionLine>().Property(transactionLine => transactionLine.PricePerHour).HasDefaultValue(44.5);
         }   

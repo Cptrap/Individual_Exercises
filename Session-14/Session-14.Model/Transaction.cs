@@ -19,7 +19,7 @@ namespace Session_14.Model
         public Guid ManagerID { get; set; }
         public Manager Manager { get; set; }
         public decimal TotalPrice { get; set; }
-        public List<TransactionLine> TransactionLines { get; set; }
+        //public List<TransactionLine> TransactionLines { get; set; }
         public Transaction(DateTime date)
         {
             Date = date;

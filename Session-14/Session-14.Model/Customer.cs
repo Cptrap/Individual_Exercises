@@ -19,5 +19,13 @@ namespace Session_14.Model
         {
 
         }
+        public Customer(string name, string surname, string phone, string tin)
+        {
+            Name = name;
+            Surname = surname;
+            Phone = phone;
+            TIN = tin;
+            
+        }
     }
 }

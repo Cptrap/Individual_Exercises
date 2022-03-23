@@ -12,7 +12,7 @@ using Session_014.EF.Context;
 namespace Session_014.EF.Migrations
 {
     [DbContext(typeof(CarCenterContext))]
-    [Migration("20220322204421_Initial")]
+    [Migration("20220323141535_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -228,8 +228,6 @@ namespace Session_014.EF.Migrations
 
                     b.HasIndex("ServiceTaskID");
 
-                    b.HasIndex("TransactionID");
-
                     b.ToTable("TransactionLine", (string)null);
                 });
 
@@ -285,17 +283,9 @@ namespace Session_014.EF.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Session_14.Model.Transaction", "Transaction")
-                        .WithMany("TransactionLines")
-                        .HasForeignKey("TransactionID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Engineer");
 
                     b.Navigation("ServiceTask");
-
-                    b.Navigation("Transaction");
                 });
 
             modelBuilder.Entity("Session_14.Model.Car", b =>
@@ -321,11 +311,6 @@ namespace Session_014.EF.Migrations
                 });
 
             modelBuilder.Entity("Session_14.Model.ServiceTask", b =>
-                {
-                    b.Navigation("TransactionLines");
-                });
-
-            modelBuilder.Entity("Session_14.Model.Transaction", b =>
                 {
                     b.Navigation("TransactionLines");
                 });

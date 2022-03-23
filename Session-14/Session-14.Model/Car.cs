@@ -18,5 +18,11 @@ namespace Session_14.Model
         {
 
         }
+        public Car(Brands brand, string model, string regNum)
+        {
+            Brand = brand;
+            Model = model;
+            RegistrationNumber = regNum;
+        }
     }
 }
