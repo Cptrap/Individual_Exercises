@@ -66,7 +66,12 @@ namespace Session_14
         }
         private void editEngineer_Click(object sender, EventArgs e)
         {
-            //openF.Open<EngineerForm>();
+            var services = new ServiceCollection();
+            services.AddSingleton<IEntityRepo<Engineer>, EngineerRepo>();
+            services.AddSingleton<EngineerForm>();
+            ServiceProvider = services.BuildServiceProvider();
+            var engineerForm = ServiceProvider.GetRequiredService<EngineerForm>();
+            engineerForm.ShowDialog();
         }
         private void newTrasaction_Click(object sender, EventArgs e)
         {

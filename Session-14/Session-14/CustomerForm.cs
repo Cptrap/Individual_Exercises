@@ -44,9 +44,16 @@ namespace Session_14
             var customerSurname = ctrlSurname.Text;
             var customerPhone = ctrlPhone.Text;
             var customerTIN = ctrlTIN.Text;
+            if (string.IsNullOrEmpty(customerName) || string.IsNullOrEmpty(customerSurname) ||
+                string.IsNullOrEmpty(customerPhone) || string.IsNullOrEmpty(customerTIN))
+            {
+                MessageBox.Show("Empty Textboxes!");
+                return;
+            }
             var customer = new Customer(customerName, customerSurname, customerPhone, customerTIN);
             _customerRepo.Create(customer);
             RefreshCustomers();
+            ClearTextBox();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -59,7 +66,9 @@ namespace Session_14
                 _customerRepo.Delete(selectedCustomer.ID);
                 RefreshCustomers();
             }
-           
+            ClearTextBox();
+
+
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -72,6 +81,7 @@ namespace Session_14
                     RefreshCustomers();
                 }
             }
+            ClearTextBox();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -113,6 +123,13 @@ namespace Session_14
             upadateCustomer.Phone = ctrlPhone.Text;
             upadateCustomer.TIN = ctrlTIN.Text;
             return upadateCustomer;
+        }
+        private void ClearTextBox()
+        {
+            ctrlName.Text = string.Empty;
+            ctrlSurname.Text = string.Empty;
+            ctrlPhone.Text = string.Empty;
+            ctrlTIN.Text = string.Empty;
         }
     }
 

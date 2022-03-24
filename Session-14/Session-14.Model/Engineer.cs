@@ -21,5 +21,11 @@ namespace Session_14.Model
         {
 
         }
+        public Engineer(string name, string surname, decimal sallary)
+        {
+            Name = name;
+            Surname = surname;
+            SallaryPerMonth = sallary;
+        }
     }
 }
