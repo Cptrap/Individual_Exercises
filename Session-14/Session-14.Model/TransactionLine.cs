@@ -13,7 +13,7 @@ namespace Session_14.Model
         
         public  decimal PricePerHour {get;set;}
         public Guid TransactionID { get; set; }
-        //public Transaction Transaction { get; set; }
+        public Transaction Transaction { get; set; }
         public Guid ServiceTaskID { get; set; }
         public ServiceTask ServiceTask { get; set; }
         public Guid EngineerID { get; set; }
