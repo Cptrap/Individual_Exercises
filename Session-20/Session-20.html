@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session-20</title>
+    <style type="text/css">
+        .selected{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <label for="s">Input</label>
+        <input type = "text" id = "s" size = "25">
+        <label for="t">Output</label>
+        <output type = "text" id = "t" size = "25">
+
+        <p>
+            <label for="palindrome">Input</label>
+            <input type = "text" id = "palindrome" size = "25">
+            <label for="p">Output</label>
+            <output type = "text" id = "p" size = "25">
+            </p>
+
+        <p>
+            <label for="number1">Number 1</label>
+            <input type = "number" id = "number1" size = "25">
+            <label for="number2">Number 2</label>
+            <input type = "number" id = "number2" size = "25">
+            <label for="multi">Output</label>
+            <output type = "number" id = "multi" size = "25">
+        </p>
+        <p>
+            <label for="foo">Input</label>
+            <input type = "text" id = "foo" size = "25">
+            <label for="enchance">Output</label>
+            <output type = "text" id = "enchance" size = "25">
+        </p>
+        
+        
+    </p>
+    <input type = "button" id = "r" value = "Reverse"
+           onclick="document.getElementById('t').innerHTML = document.getElementById('s').value.reverse();">
+    <input type = "button" id = "f" value = "Palindrome"
+           onclick="document.getElementById('p').innerHTML = checkPalindrome(document.getElementById('palindrome').value, document.getElementById('palindrome').value.reverse());">
+    <input type = "button" id = "g" value = "Multiply"
+           onclick="document.getElementById('multi').innerHTML = multiply(document.getElementById('number1').value,document.getElementById('number2').value);">
+    <input type = "button" id = "h" value = "Enchance"
+           onclick="document.getElementById('enchance').innerHTML = incrementString(document.getElementById('foo').value)">
+
+    <p>
+    <form>
+        <label for="name">Name</label>
+        <input type = "text" id = "name" size = "25">
+        <label for="surname">Surname</label>
+        <input type = "text" id = "surname" size = "25">
+        <label for="age">Age</label>
+        <input type = "number" id = "age" size = "25">
+        <label for="gender">Gender</label>
+        <select id = "gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <p>
+        <input type = "button" id = "update" value = "Add"
+            onclick="customerUpdate();">
+        </p>
+        <table id="customerTable">
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+    </form>
+    </p>
+
+    <script type="text/javascript">  
+        
+        //Exercise 1
+        String.prototype.reverse=function(){
+            return this.split("").reverse().join("");
+        } 
+        //Exercise 2
+        function checkPalindrome(string,reverse) {
+            if (string == reverse){
+                return ('It is a palindrome');
+            } else {
+                return ('It is not a palindrome');
+            }
+        }
+        //Exercise 4
+        function multiply(a, b){
+            return a*b;
+        }
+        //Exercise 5
+        function incrementString(str) {
+            var count = String(str).match(/\d*$/);
+            var enchaned = String(str).substr(0, count.index) + (++count[0]);
+            return enchaned;
+        }
+        //Exercise 3
+        function customerUpdate(){
+            var name = document.getElementById("name").value;
+            var surname = document.getElementById("surname").value;
+            var age = document.getElementById("age").value;
+            var gender = document.getElementById("gender").value;
+                
+            let customerInfo = {"name":name, "surname":surname, "age":age, "gender":gender};
+                
+            var customerTable = document.getElementById("customerTable");
+            let addRow = document.createElement("tr");
+            Object.values(customerInfo).forEach((value) => {
+                let cell = document.createElement("td");
+                cell.innerText = value;
+                addRow.appendChild(cell);
+            })
+            customerTable.appendChild(addRow);
+
+        }
+
+    </script>    
+</body>
+</html>
